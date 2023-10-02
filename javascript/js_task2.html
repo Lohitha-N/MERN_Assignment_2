@@ -3,16 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript task 1</title>
+    <title>Javascript task 2</title>
     <script>
-      function Reverse() {
-        var x = parseInt(document.getElementById("x").value);
-        var rev = 0;
-        while (x > 0) {
-          rev = rev * 10 + (x % 10);
-          x = parseInt(x / 10);
-        }
-        document.getElementById("result").textContent = rev.toString();
+      function Sort() {
+        var x = document.getElementById("x").value;
+        document.getElementById("result").textContent = x
+          .split("")
+          .sort()
+          .join("");
       }
     </script>
     <style>
@@ -29,9 +27,9 @@
   <body>
     <center>
       <div class="transparent-box">
-        <h2>Reversing a Number</h2>
-        Enter Number : <input type="number" id="x" /><br /><br />
-        <button onclick="Reverse()">Submit</button><br /><br />
+        <h2>String in Alphabetical Order</h2>
+        Enter String : <input type="text" id="x" /><br /><br />
+        <button onclick="Sort()">Submit</button><br /><br />
         Result : <span id="result"></span>
       </div>
     </center>
